@@ -1,0 +1,54 @@
+
+import java.util.Random;
+import java.util.Scanner;
+public class Game
+{
+	public static void main(String args[])
+	{
+		int count=1;
+		int i = 1;
+		Random rand = new Random();
+		int x = rand.nextInt(100);
+		//System.out.println("Random Integer is "+x);
+		System.out.println("I have chosen the number in between 1 to 100");
+		System.out.println("Can you guess that number ");
+		System.out.println("I will help you out by giving some statements ");
+		System.out.print("Enter the guess number");
+		Scanner sc = new Scanner(System.in);
+		int y = sc.nextInt();
+		/*int arr[];
+		arr[0] = y;
+		*/
+		while(y!=x)
+		{
+			if(y<x && (y<=100 && y>0))
+			{
+				System.out.print(y+" is the smaller than my chosen number...");
+				count++;
+			}
+			else if(y>x && (y>0 && y<=100))
+			{
+				System.out.print(y+"is the greater than my chosen number....");
+				count++;
+			}
+			if(y<0 || y>100)
+			{
+				System.out.printf("%nEnter the number in valid range .....");
+				System.out.println("Any way this will not come in to count");
+				System.out.println("----'DONT WORRY'-----");
+			}
+			Scanner sc1 = new Scanner(System.in);
+			int z = sc.nextInt();
+			y=z;
+			/*arr[i] = y;
+			i++;*/
+		}
+		 if(y == x)
+				System.out.println(y+"is my chosen number....");
+				System.out.println("You took "+count+" times to guess the number ");
+				/*for(int j=0;j<i;j++)
+				{
+					System.out.println("Your guesses are :" + "=" + arr[i]);
+				}*/
+	}
+}
