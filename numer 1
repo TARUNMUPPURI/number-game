@@ -16,7 +16,7 @@ public class Game
 		System.out.print("Enter the guess number");
 		Scanner sc = new Scanner(System.in);
 		int y = sc.nextInt();
-		/*int arr[];
+		/*int arr[] = new arr[];
 		arr[0] = y;
 		*/
 		while(y!=x)
